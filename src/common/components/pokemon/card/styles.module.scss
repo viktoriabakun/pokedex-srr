@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 96px auto;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:nth-child(2n) {
+    background-color: #f6f6f6;
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+}
