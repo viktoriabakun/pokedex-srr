@@ -12,7 +12,7 @@ const PokemonCard: FC<IPokemonCard> = ({ cardData }) => {
   const { id, name, sprites, types } = cardData;
 
   const nameCapitalized = capitalise(name);
-  const typeList = types.map((t) => t.type.name).join(', ');
+  const typeString = types.map((t) => t.type.name).join(', ');
   const pokemonImg = sprites?.other['official-artwork'].front_default;
   const pokemonGif = sprites?.versions['generation-v']['black-white']['animated']['front_default'];
 
@@ -31,7 +31,7 @@ const PokemonCard: FC<IPokemonCard> = ({ cardData }) => {
         <img src={avatar} className={styles.avatar} alt="pokemon" />
       </div>
 
-      <p className={`${styles.ballHalf} ${styles.bottom}`}>{typeList}</p>
+      <p className={`${styles.ballHalf} ${styles.bottom}`}>{typeString}</p>
     </div>
   );
 };
