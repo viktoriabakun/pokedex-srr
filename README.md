@@ -1,16 +1,10 @@
-# Microservices dashboard
+# Pokedex pet project
+> #### Template: Microservices dashboard by Lomray Software
 
-It's admin dashboard for this [microservices](https://github.com/Lomray-Software/microservices)
-
-[![Quality Gate Status](https://sonarqube-proxy.lomray.com/status/microservices-dashboard?token=4ecf364ac12c63753dfa28efa050c247)](https://sonarqube.lomray.com/dashboard?id=microservices-dashboard)
-[![Reliability Rating](https://sonarqube-proxy.lomray.com/reliability/microservices-dashboard?token=4ecf364ac12c63753dfa28efa050c247)](https://sonarqube.lomray.com/dashboard?id=microservices-dashboard)
-[![Security Rating](https://sonarqube-proxy.lomray.com/security/microservices-dashboard?token=4ecf364ac12c63753dfa28efa050c247)](https://sonarqube.lomray.com/dashboard?id=microservices-dashboard)
-[![Technical Debt](https://sonarqube-proxy.lomray.com/techdept/microservices-dashboard?token=4ecf364ac12c63753dfa28efa050c247)](https://sonarqube.lomray.com/dashboard?id=microservices-dashboard)
-[![Vulnerabilities](https://sonarqube-proxy.lomray.com/vulnerabilities/microservices-dashboard?token=4ecf364ac12c63753dfa28efa050c247)](https://sonarqube.lomray.com/dashboard?id=microservices-dashboard)
-[![Lines of code](https://sonarqube-proxy.lomray.com/lines/microservices-dashboard?token=4ecf364ac12c63753dfa28efa050c247)](https://sonarqube.lomray.com/dashboard?id=microservices-dashboard)
-[![Code smells](https://sonarqube-proxy.lomray.com/codesmells/microservices-dashboard?token=4ecf364ac12c63753dfa28efa050c247)](https://sonarqube.lomray.com/dashboard?id=microservices-dashboard)
-
-Install it and run (development):
+<details>
+  <summary>Documentation</summary>
+  
+  Install it and run (development):
 
 ```bash
 npm ci
@@ -45,3 +39,6 @@ serve -s build/public
 npm run build
 serve build/public
 ```
+</details>
+
+
