@@ -1,23 +1,108 @@
-.container {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 96px auto;
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: #333;
   cursor: pointer;
   text-decoration: none;
-
-  &:nth-child(2n) {
-    background-color: #f6f6f6;
-  }
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  z-index: 1;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
 }
 
-.details {
+.itemContainer:hover {
+  animation: bubble 2s ease-out infinite;
+}
+
+.itemContainer:hover .avatar {
+  transform: rotate3d(50, 45, 20, 360deg);
+}
+
+.itemContainer:hover .avatarContainer {
+  border: 8px solid #313131;
+}
+
+.itemContainer:after {
+  content: '';
+  width: 200px;
+  height: 10px;
+  position: absolute;
+  top: 95px;
+  background-color: #313131;
+}
+
+.itemContent {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
+.avatarContainer {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 12px solid #313131;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 2;
+  position: absolute;
+  transition: 500ms;
+}
+
 .avatar {
-  width: 96px;
-  height: 96px;
+  transition: 500ms;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  z-index: 3;
+}
+
+.ballHalf {
+  width: 200px;
+  height: 100px;
+}
+
+.top {
+  background: radial-gradient(circle at 150px 66px, #fff6f6, #ff0303);
+  border-top: 1px solid #bb7070;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom: 0;
+}
+
+.bottom {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(186, 185, 185, 0.5);
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-top: 0;
+}
+
+@keyframes bubble {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scaleY(0.95) scaleX(1.05);
+  }
+  48% {
+    transform: scaleY(1.1) scaleX(0.9);
+  }
+  68% {
+    transform: scaleY(0.98) scaleX(1.02);
+  }
+  80% {
+    transform: scaleY(1.02) scaleX(0.98);
+  }
+  97%,
+  100% {
+    transform: scale(1);
+  }
 }
